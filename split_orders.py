@@ -16,6 +16,7 @@ for order in orders[1:]:
         orders_split[int(order[0].split('/')[1]) - 1].append(order)
 
 for i in range(30):
-    with open('datas/orders_9_%s_2014.csv' % (i + 1), 'w', encoding='UTF-8', newline='') as f:
+    with open('datas/orders_9_%s_2014.csv' % (i + 1), 'w', \
+        encoding='UTF-8', newline='') as f:
         writer = csv.writer(f)
         writer.writerows(orders_split[i])
